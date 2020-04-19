@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.1.0
+        name: checkout
+
+      - uses: mr-smithers-excellent/docker-build-push@v3
+        name: publish docker image
+        with:
+          image: justroots/distcc
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
