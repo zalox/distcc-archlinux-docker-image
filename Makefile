@@ -5,11 +5,11 @@ TAG = $(shell git describe --first-parent --always --abbrev=0 --match='v[0-9]*.*
 build::
 	docker build --rm --tag $(IMAGE) .
 
+run::
+	docker run --rm $(IMAGE) -p 3632:3632 -p 3633:3633 -d $(IMAGE)
+
 tag::
 	docker tag $(IMAGE) $(NAME):$(TAG)
-
-run::
-	docker run --rm $(IMAGE)
 
 push-latest::
 	docker push $(IMAGE)
