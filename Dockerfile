@@ -1,5 +1,5 @@
 FROM debian:testing-slim
-LABEL maintainer="distcc.justroots.com"
+LABEL maintainer="davvid@gmail.com"
 ENV DEBIAN_FRONTEND noninteractive
 ENV ALLOW 192.168.0.0/16
 
