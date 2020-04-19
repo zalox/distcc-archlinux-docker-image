@@ -7,3 +7,6 @@ image::
 
 tag::
 	docker tag $(IMAGE) $(NAME):$(TAG)
+
+run::
+	docker run $(IMAGE)
