@@ -6,7 +6,7 @@ build::
 	docker build --rm --tag $(IMAGE) .
 
 run::
-	docker run --rm $(IMAGE) -p 3632:3632 -p 3633:3633 -d $(IMAGE)
+	docker run -p 3632:3632 -p 3633:3633 -d --rm $(IMAGE)
 
 tag::
 	docker tag $(IMAGE) $(NAME):$(TAG)
