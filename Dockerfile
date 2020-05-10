@@ -11,4 +11,4 @@ RUN useradd distcc
 USER distcc
 EXPOSE 3632
 
-CMD distccd --jobs $(nproc) --log-stderr --no-detach --daemon --allow ${ALLOW} --log-level info
+CMD distccd --jobs $(nproc) --log-stderr --no-detach --daemon --allow-private --allow ${ALLOW} --log-level info
