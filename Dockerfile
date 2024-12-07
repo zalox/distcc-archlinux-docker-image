@@ -8,7 +8,7 @@ RUN pacman -Suyyyu --noconfirm \
     base-devel \
     distcc
 
-ENV ALLOW "10.0.0.0/24,10.0.0.100"
+ENV ALLOW "10.0.0.0/24"
 
 USER distcc
 EXPOSE 3632

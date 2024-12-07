@@ -1,4 +1,4 @@
-NAME = justroots/distcc
+NAME = zalox/distccd
 IMAGE = $(NAME):latest
 TAG = $(shell git describe --first-parent --always --abbrev=0 --match='v[0-9]*.*' HEAD)
 
